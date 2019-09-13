@@ -26,11 +26,15 @@ const reducers = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middlewares = composeEnhancers(applyMiddleware(reduxPromise, logger));
 
-
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers, {}, middlewares)}>
+  <Provider store={createStore(reducers, { currentUser: "Marc" }, middlewares)}>
     <App />
   </Provider>,
   document.getElementById('root')
 );
+
+
+// TO ADD username
+// const username = window.prompt("What's your name?", "Bob");
+//   <Provider store={createStore(reducers, { currentUser: username }, middlewares)}>

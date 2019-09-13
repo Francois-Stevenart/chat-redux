@@ -20,6 +20,8 @@ body {
   flex-grow: 1;
   padding: 0px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
   .message-list-header {
     h4 {
       padding: 20px 0px 25px 30px;
@@ -29,6 +31,7 @@ body {
   }
   .messages-container {
     padding: 20px 30px;
+    flex-grow: 1;
   }
 }
 
@@ -56,4 +59,11 @@ body {
   .message-content {
     font-size: 1.1em;
   }
+}
+
+.message-form {
+  padding: 25px 0px 25px 30px;
+  border-top: 1px solid lightgrey;
+  font-weight: bold;
+  min-height: 100px;
 }
