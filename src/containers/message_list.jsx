@@ -13,11 +13,14 @@ class MessageList extends Component {
   render () {
     return (
       <div className="message-list">
-        <h4>Messages List</h4>
-        {this.props.messages.map((message) => {
-          return <Message message={message} key={message.created_at} />;
-        })}
-
+        <div className="message-list-header">
+          <h4>Messages List</h4>
+        </div>
+        <div className="messages-container">
+          {this.props.messages.map((message) => {
+            return <Message message={message} key={message.created_at} />;
+          })}
+        </div>
       </div>);
   }
 }

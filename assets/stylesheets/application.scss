@@ -18,10 +18,42 @@ body {
 .message-list {
   height: 100vh;
   flex-grow: 1;
-  padding: 20px;
+  padding: 0px;
   background-color: white;
+  .message-list-header {
+    h4 {
+      padding: 20px 0px 25px 30px;
+      border-bottom: 1px solid lightgrey;
+      font-weight: bold;
+    }
+  }
+  .messages-container {
+    padding: 20px 30px;
+  }
 }
 
 .message {
-
+  margin-bottom: 20px;
+  .message-header {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+  }
+  .author {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    color: #5874B1;
+    text-transform: capitalize;
+  }
+  .date {
+    font-style: italic;
+    opacity: .8;
+    font-size: .8em;
+    margin-bottom: 5px;
+  }
+  .message-content {
+    font-size: 1.1em;
+  }
 }
