@@ -13,16 +13,38 @@ body {
   margin: 0px;
   padding: 20px;
   background-color: #DBDBDB;
+  h4 {
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0px 0px 0px 20px;
+    li {
+      font-size: 1.15em;
+      padding-bottom: 15px;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    .selected-channel {
+      font-weight: bold;
+    }
+  }
 }
 
 .message-list {
-  height: 100vh;
+  height: 95vh;
   flex-grow: 1;
   padding: 0px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   .message-list-header {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 2;
     h4 {
       padding: 20px 0px 25px 30px;
       border-bottom: 1px solid lightgrey;
